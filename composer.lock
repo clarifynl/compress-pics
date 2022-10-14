@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b53b2c6633f497c1f2ab8420279de46a",
+    "packages": [
+        {
+            "name": "ourcodeworld/php-pngquant",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ourcodeworld/php-pngquant.git",
+                "reference": "893b396224dcc95874f985dbd7dbf07f4d15a2fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ourcodeworld/php-pngquant/zipball/893b396224dcc95874f985dbd7dbf07f4d15a2fa",
+                "reference": "893b396224dcc95874f985dbd7dbf07f4d15a2fa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ourcodeworld\\PNGQuant\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
+            "authors": [
+                {
+                    "name": "Carlos Delgado",
+                    "email": "dev@ourcodeworld.com",
+                    "homepage": "http://ourcodeworld.com"
+                }
+            ],
+            "description": "A non-official PHP Wrapper class for pngquant, the command-line utility and a library for lossy compression of PNG images.",
+            "keywords": [
+                "compression",
+                "lossy",
+                "png",
+                "pngquant",
+                "wrapper"
+            ],
+            "support": {
+                "issues": "https://github.com/ourcodeworld/php-pngquant/issues",
+                "source": "https://github.com/ourcodeworld/php-pngquant/tree/master"
+            },
+            "time": "2017-04-10T21:22:50+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

@@ -1,0 +1,18 @@
+{
+    "name": "abel/compress-pics",
+    "type": "wordpress-plugin",
+    "require": {
+        "ourcodeworld/php-pngquant": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abel\\CompressPics\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abel Schupp",
+            "email": "abel_schupp@hotmail.com"
+        }
+    ]
+}
