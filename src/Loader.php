@@ -1,6 +1,5 @@
 <?php
 namespace Abel\CompressPics;
-use ourcodeworld\PNGQuant\PNGQuant;
 
 class Loader
 {
