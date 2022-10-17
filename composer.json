@@ -14,5 +14,8 @@
             "name": "Abel Schupp",
             "email": "abel_schupp@hotmail.com"
         }
-    ]
+    ],
+    "config": {
+        "vendor-dir": "lib"
+    }
 }

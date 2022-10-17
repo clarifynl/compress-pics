@@ -1,14 +1,9 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "246635b5361011678ffbeff68a20aced",
     "packages": [
         {
             "name": "ourcodeworld/php-pngquant",
             "version": "v1.0.2",
+            "version_normalized": "1.0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ourcodeworld/php-pngquant.git",
@@ -23,7 +18,9 @@
             "require": {
                 "php": ">=5.3.0"
             },
+            "time": "2017-04-10T21:22:50+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "ourcodeworld\\PNGQuant\\": "src/"
@@ -52,16 +49,9 @@
                 "issues": "https://github.com/ourcodeworld/php-pngquant/issues",
                 "source": "https://github.com/ourcodeworld/php-pngquant/tree/master"
             },
-            "time": "2017-04-10T21:22:50+00:00"
+            "install-path": "../ourcodeworld/php-pngquant"
         }
     ],
-    "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
-    "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "dev": true,
+    "dev-package-names": []
 }

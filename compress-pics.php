@@ -32,7 +32,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 define( 'COMPRESS_PICS_VERSION', '1.0.0' );
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/lib/autoload.php';
 
 
 new \Abel\CompressPics\Loader();
