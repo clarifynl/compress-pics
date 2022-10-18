@@ -17,12 +17,18 @@ class Compressor
 		return self::$instance;
 	}
 
-	public static function compressByProductID($product_id, $is_cli) {
-		\WP_CLI::line('compress product id: ' . $product_id);
+	public static function compressByProductID($product_id) {
+		if ( defined( 'WP_CLI' ) && WP_CLI ) {
+			\WP_CLI::line('compress product id: ' . $product_id);
+		}
+
 		$post_type = get_post_type($product_id);
 
 		if ($post_type != 'product') {
-			\WP_CLI::warning($product_id . ' is not a product');
+			if ( defined( 'WP_CLI' ) && WP_CLI ) {
+				\WP_CLI::warning($product_id . ' is not a product');
+			}
+
 			return false;
 		}
 
@@ -43,14 +49,14 @@ class Compressor
 			$unique_images = array_unique($images_ids);
 
 			foreach ($unique_images as $image) {
-				self::compressByID($image, $is_cli);
+				self::compressByID($image);
 			}
 		}
 
 		return true;
 	}
 
-	public static function compressByID($image_id, $is_cli = false) {
+	public static function compressByID($image_id) {
 		$sizes = get_intermediate_image_sizes();
 		$path = get_attached_file($image_id, true);
 
@@ -64,7 +70,7 @@ class Compressor
 
 			$is_compressed = self::compressImage($path);
 
-			if ($is_cli) {
+			if ( defined( 'WP_CLI' ) && WP_CLI ) {
 				if ($is_compressed) {
 					\WP_CLI::success('Compressed image: ' . $path);
 				} else {
@@ -76,7 +82,9 @@ class Compressor
 
 	public static function compressImage($path) {
 		if (!file_exists($path)) {
-			\WP_CLI::warning($path . ' is not a path.');
+			if ( defined( 'WP_CLI' ) && WP_CLI ) {
+				\WP_CLI::warning($path . ' is not a path.');
+			}
 
 			return false;
 		}
@@ -86,6 +94,7 @@ class Compressor
 		$dir = $path_info['dirname'];
 		$filename = $path_info['filename'];
 
+		syslog(LOG_DEBUG, 'compression triggered for image: ' . $path);
 
 		$exit_code = $instance->setImage($path)
 		->skipIfLarger()

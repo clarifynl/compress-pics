@@ -26,10 +26,10 @@ class CLI
 				return false;
 			}
 
-			Compressor::compressByID($image_id, true);
+			Compressor::compressByID($image_id);
 		} elseif (isset($assoc_args['product'])) {
 			if (class_exists( 'WooCommerce')) {
-				Compressor::compressByProductID($assoc_args['product'], true);
+				Compressor::compressByProductID($assoc_args['product']);
 			} else {
 				\WP_CLI::warning('WooCommerce is not active');
 
