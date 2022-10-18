@@ -88,13 +88,16 @@ class Compressor
 
 			return false;
 		}
+		syslog(LOG_DEBUG, 'compression triggered for image: ' . $path);
 
 		$instance = new PNGQuant();
 		$path_info = pathinfo($path);
 		$dir = $path_info['dirname'];
 		$filename = $path_info['filename'];
 
-		syslog(LOG_DEBUG, 'compression triggered for image: ' . $path);
+		if ($path_info['extension'] != 'png') {
+			return false;
+		}
 
 		$exit_code = $instance->setImage($path)
 		->skipIfLarger()
