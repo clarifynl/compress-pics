@@ -15,8 +15,8 @@
  * @wordpress-plugin
  * Plugin Name:       CompressPics
  * Plugin URI:        https://clarify.nl
- * Description:       This is a description of the plugin.
- * Version:           1.0.0
+ * Description:       Compress png images using PNGQuant
+ * Version:           1.0.2
  * Author:            Abel Schupp
  * Author URI:        https://clarify.nl
  * License:           GPL-2.0+
@@ -30,7 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'COMPRESS_PICS_VERSION', '1.0.0' );
+define( 'COMPRESS_PICS_VERSION', '1.0.2' );
 
 require __DIR__ . '/lib/autoload.php';
 
