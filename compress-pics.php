@@ -16,7 +16,7 @@
  * Plugin Name:       CompressPics
  * Plugin URI:        https://clarify.nl
  * Description:       Compress png images using PNGQuant
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            Abel Schupp
  * Author URI:        https://clarify.nl
  * License:           GPL-2.0+
