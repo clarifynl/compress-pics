@@ -1,5 +1,5 @@
 {
-    "name": "abel-sch/compress-pics",
+    "name": "clarifynl/compress-pics",
     "type": "wordpress-plugin",
     "require-dev": {
         "ourcodeworld/php-pngquant": "^1.0"
